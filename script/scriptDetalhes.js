@@ -1,4 +1,4 @@
-import { buscar } from "./app.js";
+import { buscar } from "../app.js";
 
 async function carregarDetalhes() {
     const parametros = new URLSearchParams(window.location.search);

@@ -1,4 +1,4 @@
-import { cadastrar } from "./app.js";
+import { cadastrar } from "../app.js";
 
 const formulario = document.querySelector("[data-form]");
 

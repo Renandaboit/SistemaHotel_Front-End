@@ -1,4 +1,4 @@
-import { atualizar } from "./app.js";
+import { atualizar } from "../app.js";
 
 const formulario = document.querySelector("[data-form]");
 
