@@ -10,22 +10,29 @@ async function carregarDetalhes() {
     const div = document.querySelector("[data-cliente]");
 
     div.classList.add(
-        "flex",
-        "flex-col",
+        "grid",
+        "grid-col-3",
+        "grid-row-2",
         "gap-4",
         "align-start",
         "text-left",
-        "bg-[#cacaca]"
+        "bg-[#cacaca]",
+        "px-4",
+        "py-4"
     );
 
     div.innerHTML = `
-        <h1 class="text-lg">${cliente.nome}</h1>
-        <p>${cliente.cpf}</p>
-        <p>${cliente.email}</p>
+        <h1 class="text-lg col-1">${cliente.nome}</h1>
+        <p class="col-2">${cliente.cpf}</p>
+        <p class="col-3">${cliente.email}</p>
         <p>${cliente.endereco}</p>
         <p>${cliente.telefone}</p>
-        <p>${cliente.dataNascimento}</p>
+        <p>${formatarData(cliente.dataNascimento)}</p>
     `;
 }
 
 carregarDetalhes();
+
+function formatarData(data) {
+    return new Date(data).toLocaleDateString("pt-BR");
+}
