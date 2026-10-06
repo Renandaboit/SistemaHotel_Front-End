@@ -1,4 +1,4 @@
-import { atualizar } from "../app.js";
+import { cadastrar } from "../api/cliente.js";
 
 const formulario = document.querySelector("[data-form]");
 
@@ -6,10 +6,7 @@ formulario.addEventListener("submit", async evento => {
     
     evento.preventDefault();
 
-    const paramentros = new URLSearchParams(window.location.search);
-
     const cliente = {
-        id: paramentros.get("id"),
         nome: formulario.nome.value,
         cpf: formulario.cpf.value,
         email: formulario.email.value,
@@ -18,7 +15,10 @@ formulario.addEventListener("submit", async evento => {
         endereco: formulario.endereco.value
     };
 
-    await atualizar(cliente.id, cliente);
+    await cadastrar(cliente);
 
-    alert(`Cliente ${cliente.nome} atualizado com sucesso`);
-});
+    alert(`Cliente ${cliente.nome} cadastrado com sucesso`);
+
+    window.location.href = "index.html";
+})
+

@@ -1,4 +1,4 @@
-import { listar, excluir } from "../app.js";
+import { listar, excluir } from "../api/cliente.js";
 
 async function carregarClientes() {
     const listaCliente = await listar();
