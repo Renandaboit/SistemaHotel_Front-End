@@ -53,11 +53,9 @@ export async function excluir(id) {
         method: "DELETE"
     });
 
-    const resultado = await resposta.json();
-
-    if(resposta.status = 204) {
+    if(resposta.status == 204) {
         return;
     }
 
-    return resultado;
+    return await resultado.json;
 }
