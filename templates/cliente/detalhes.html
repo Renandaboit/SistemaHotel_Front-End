@@ -1,18 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <title>Document</title>
 </head>
-
 <body>
     <header>
         <div class="flex flex-row justify-between items-center bg-[#cacaca] px-8 py-4">
             <h1 class="text-2xl">HOTEL LEGAU</h1>
-
+    
             <div class="flex flex-row gap-4">
                 <button class="px-4 py-2 bg-[#cacaca] rounded-sm">Log in</button>
                 <button class="px-4 py-2 bg-[#cacaca] rounded-sm">Sign up</button>
@@ -22,24 +20,13 @@
 
     <main>
         <div class="flex flex-col gap-8 px-8 py-12 bg-[#eaeaea]">
-            <h2 class="text-4xl">Atualizar</h2>
+            <h2 class="text-4xl">Cliente</h2>
 
-            <form data-form>
-
-                <input type="text" name="nome" placeholder="Nome">
-                <input type="text" name="cpf" placeholder="CPF">
-                <input type="email" name="email" placeholder="Email">
-                <input type="tel" name="telefone" placeholder="Telefone">
-                <input type="date" name="dataNascimento" placeholder="Data de nascimento">
-                <input type="text" name="endereco" placeholder="Endereço">
-
-                <button type="submit">Atualizar</button>
-            </form>
+            <div data-cliente></div>
         </div>
     </main>
 
-    <script type="module" src="../js/pages/scriptAtualizar.js"></script>
+    <script type="module" src="../../js/pages/cliente/scriptDetalhes.js"></script>
 
 </body>
-
 </html>
