@@ -19,6 +19,6 @@ formulario.addEventListener("submit", async evento => {
 
     alert(`Cliente ${cliente.nome} cadastrado com sucesso`);
 
-    window.location.href = "index.html";
+    window.location.href = "templates/cliente/listar.html";
 })
 

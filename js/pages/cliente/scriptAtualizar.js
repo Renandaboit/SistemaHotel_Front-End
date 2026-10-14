@@ -21,4 +21,6 @@ formulario.addEventListener("submit", async evento => {
     await atualizar(cliente.id, cliente);
 
     alert(`Cliente ${cliente.nome} atualizado com sucesso`);
+
+    window.location.href = "templates/cliente/listar.html";
 });
