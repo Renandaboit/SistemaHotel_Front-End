@@ -6,10 +6,16 @@ async function inicio() {
         window.location.href = `/templates/cliente/listar.html`;
     });
 
-    const botoesQuartos = document.querySelector("[data-quartos]");
+    const botaoQuartos = document.querySelector("[data-quartos]");
 
-    botoesQuartos.addEventListener("click", () => {
+    botaoQuartos.addEventListener("click", () => {
         window.location.href = `/templates/quarto/listar.html`;
+    });
+
+    const botaoReserva = document.querySelector("[data-reservas]");
+
+    botaoReserva.addEventListener("click", () => {
+        window.location.href = `/templates/reserva/listar.html`;
     });
 }
 

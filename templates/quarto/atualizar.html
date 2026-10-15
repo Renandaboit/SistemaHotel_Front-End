@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <div class="flex flex-row justify-between items-center bg-[#cacaca] px-8 py-4">
+            <h1 class="text-2xl">HOTEL LEGAU</h1>
+
+            <div class="flex flex-row gap-4">
+                <button class="px-4 py-2 bg-[#cacaca] rounded-sm">Log in</button>
+                <button class="px-4 py-2 bg-[#cacaca] rounded-sm">Sign up</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="flex flex-col gap-8 px-8 py-12 bg-[#eaeaea]">
+            <h2 class="text-4xl">Atualizar</h2>
+
+            <form data-form class="grid grid-cols-3 gap-x-20 gap-y-8">
+
+                <input class="bg-[#fafafa] border rounded-sm border-[#bababa] w-80 px-2 py-2 justify-self-center" type="number" name="numero" placeholder="Número">
+                <select class="bg-[#fafafa] border rounded-sm border-[#bababa] w-80 px-2 py-2 justify-self-center" name="tipoQuarto" id="tipoQuarto">
+                    <option value="">Selecione uma opção</option>
+                    <option value="SIMPLES">Simples</option>
+                    <option value="DUPLO">Duplo</option>
+                    <option value="SUITE">Suíte</option>
+                    <option value="SUITE_PRESIDENCIAL">Suíte presidencial</option>
+                </select>
+                <input class="bg-[#fafafa] border rounded-sm border-[#bababa] w-80 px-2 py-2 justify-self-center" type="number" name="capacidade" placeholder="Capacidade">
+                <input class="bg-[#fafafa] border rounded-sm border-[#bababa] w-80 px-2 py-2 justify-self-center" type="number" name="preco" placeholder="Preço">
+                <select class="bg-[#fafafa] border rounded-sm border-[#bababa] w-80 px-2 py-2 justify-self-center" name="statusQuarto" id="statusQuarto">
+                    <option value="">Selecione uma opção</option>
+                    <option value="DISPONIVEL">Disponível</option>
+                    <option value="RESERVADO">Reservado</option>
+                    <option value="OCUPADO">Ocupado</option>
+                    <option value="EM_LIMPEZA">Em limpeza</option>
+                    <option value="MANUTENCAO">Em manutenção</option>
+                </select>
+
+                <button class="col-2 bg-[#fafafa] rounded-sm border border-[#bababa]" type="submit">Atualizar</button>
+            </form>
+        </div>
+    </main>
+
+    <script type="module" src="../../js/pages/quarto/scriptAtualizar.js"></script>
+
+</body>
+
+</html>
