@@ -1,4 +1,4 @@
-import { atualizar } from "../../api/cliente.js";
+import { atualizar } from "../../api/customer.js";
 
 const formulario = document.querySelector("[data-form]");
 
@@ -22,5 +22,5 @@ formulario.addEventListener("submit", async evento => {
 
     alert(`Cliente ${cliente.nome} atualizado com sucesso`);
 
-    window.location.href = "templates/cliente/listar.html";
+    window.location.href = "templates/customer/list.html";
 });

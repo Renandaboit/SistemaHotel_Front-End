@@ -1,4 +1,4 @@
-import { buscar } from "../../api/cliente.js";
+import { buscar } from "../../api/customer.js";
 
 async function carregarDetalhes() {
     const parametros = new URLSearchParams(window.location.search);

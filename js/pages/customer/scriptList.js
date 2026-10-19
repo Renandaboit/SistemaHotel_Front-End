@@ -1,4 +1,4 @@
-import { listar, excluir } from "../../api/cliente.js";
+import { listar, excluir } from "../../api/customer.js";
 
 async function carregarClientes() {
     const listaCliente = await listar();
@@ -35,7 +35,7 @@ async function carregarClientes() {
     const botaoCadastrar = document.querySelector("[data-cadastrar]");
 
     botaoCadastrar.addEventListener("click", () => {
-        window.location.href = `/templates/cliente/cadastrar.html`;
+        window.location.href = `/templates/customer/register.html`;
     });
 
     const botoesDetalhes = document.querySelectorAll("[data-detalhes]");
@@ -44,7 +44,7 @@ async function carregarClientes() {
         botao.addEventListener("click", () => {
             const id = botao.dataset.detalhes;
 
-            window.location.href = `/templates/cliente/detalhes.html?id=${id}`;
+            window.location.href = `/templates/customer/details.html?id=${id}`;
         });
     });
 
@@ -54,7 +54,7 @@ async function carregarClientes() {
         botao.addEventListener("click", () => {
             const id = botao.dataset.atualizar;
             
-            window.location.href = `/templates/cliente/atualizar.html?id=${id}`;
+            window.location.href = `/templates/customer/update.html?id=${id}`;
         });
     });
 

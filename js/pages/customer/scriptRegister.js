@@ -1,4 +1,4 @@
-import { cadastrar } from "../../api/cliente.js";
+import { cadastrar } from "../../api/customer.js";
 
 const formulario = document.querySelector("[data-form]");
 
@@ -19,6 +19,6 @@ formulario.addEventListener("submit", async evento => {
 
     alert(`Cliente ${cliente.nome} cadastrado com sucesso`);
 
-    window.location.href = "templates/cliente/listar.html";
+    window.location.href = "templates/customer/list.html";
 })
 

@@ -1,4 +1,4 @@
-import { cadastrar } from "../../api/quarto.js";
+import { cadastrar } from "../../api/room.js";
 
 const formulario = document.querySelector("[data-form]");
 
@@ -17,6 +17,6 @@ formulario.addEventListener("submit", async evento => {
 
     alert(`Quarto N° ${quarto.numero} cadastrado com sucesso`);
 
-    window.location.href = "templates/quarto/listar.html";
+    window.location.href = "templates/room/list.html";
 })
 

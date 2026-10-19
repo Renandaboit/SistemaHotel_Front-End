@@ -1,4 +1,4 @@
-import { listar, excluir } from "../../api/quarto.js";
+import { listar, excluir } from "../../api/room.js";
 
 async function carregarQuartos() {
     const listaQuarto = await listar();
@@ -35,7 +35,7 @@ async function carregarQuartos() {
     const botaoCadastrar = document.querySelector("[data-cadastrar]");
 
     botaoCadastrar.addEventListener("click", () => {
-        window.location.href = `/templates/quarto/cadastrar.html`;
+        window.location.href = `/templates/room/register.html`;
     });
 
     const botoesDetalhes = document.querySelectorAll("[data-detalhes]");
@@ -44,7 +44,7 @@ async function carregarQuartos() {
         botao.addEventListener("click", () => {
             const id = botao.dataset.detalhes;
 
-            window.location.href = `/templates/quarto/detalhes.html?id=${id}`;
+            window.location.href = `/templates/room/details.html?id=${id}`;
         });
     });
 
@@ -54,7 +54,7 @@ async function carregarQuartos() {
         botao.addEventListener("click", () => {
             const id = botao.dataset.atualizar;
             
-            window.location.href = `/templates/quarto/atualizar.html?id=${id}`;
+            window.location.href = `/templates/room/update.html?id=${id}`;
         });
     });
 
