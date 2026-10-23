@@ -1,6 +1,9 @@
 :root {
     --background-primary-color: #fafafa;
     --background-secondary-color: #bababa;
+    --background-CTA-color: #000000;
+
+    --text-primary-color: #000000;
 }
 
 * {
@@ -12,48 +15,62 @@
 body {
     font-family: 'Open Sans', sans-serif;
     background-color: var(--background-primary-color);
-}
 
-.header-data {
-    display: flex;
-    flex-direction: column;
-    padding: 0.5rem 1rem;
-
-    .header-main-data {
+    .header-data {
         display: flex;
-        flex-direction: row;
-        justify-content: space-between;
+        flex-direction: column;
+        padding: 0.5rem 1rem;
         align-items: center;
-        padding: 1.1rem 0;
 
-        h3 {
-            font-weight: 400;
-        }
-
-        .aditional-header-data {
+        .header-main-data {
             display: flex;
             flex-direction: row;
-            gap: 1.25rem;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.1rem 0;
+            width: 100%;
 
-            select {
-                border: none;
-                outline: none;
-                background-color: var(--background-primary-color);
+            h3 {
+                font-weight: 400;
+            }
 
-                option {
+            .aditional-header-data {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                font-size: 0.9rem;
+                gap: 1.25rem;
+
+                select {
                     border: none;
                     outline: none;
+                    font-size: 0.9rem;
                     background-color: var(--background-primary-color);
                 }
 
-                &:focus,
-                &:active {
+                button {
                     border: none;
-                    outline: none;
-                    box-shadow: none;
+                    padding: 0.65rem;
+                    color: var(--background-primary-color);
+                    background-color: var(--background-CTA-color);
+                    font-family: 'Open Sans', sans-serif;
+                    font-weight: 500;
+                    font-size: 0.9rem;
                 }
+            }
+        }
+
+        .main-sections {
+            display: flex;
+            flex-direction: row;
+            gap: 1rem;
+
+            a {
+                text-decoration: none;
+                color: var(--text-primary-color);
+                font-size: 0.9rem;
+                font-weight: 500;
             }
         }
     }
 }
-
