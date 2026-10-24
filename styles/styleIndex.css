@@ -4,6 +4,9 @@
     --background-CTA-color: #000000;
 
     --text-primary-color: #000000;
+    --text-secondary-color: #fafafa;
+
+    --font-family: 'Open Sans', sans-serif;
 }
 
 * {
@@ -13,13 +16,12 @@
 }
 
 body {
-    font-family: 'Open Sans', sans-serif;
     background-color: var(--background-primary-color);
 
     .header-data {
         display: flex;
         flex-direction: column;
-        padding: 0.5rem 1rem;
+        padding: 0.5rem 1rem 0rem 1rem;
         align-items: center;
 
         .header-main-data {
@@ -32,6 +34,8 @@ body {
 
             h3 {
                 font-weight: 400;
+                font-family: var(--font-family);
+                font-size: 1.5rem;
             }
 
             .aditional-header-data {
@@ -45,7 +49,14 @@ body {
                     border: none;
                     outline: none;
                     font-size: 0.9rem;
+                    font-family: var(--font-family);
+                    font-weight: 500;
                     background-color: var(--background-primary-color);
+                }
+
+                p {
+                    font-family: var(--font-family);
+                    font-weight: 500;
                 }
 
                 button {
@@ -53,7 +64,7 @@ body {
                     padding: 0.65rem;
                     color: var(--background-primary-color);
                     background-color: var(--background-CTA-color);
-                    font-family: 'Open Sans', sans-serif;
+                    font-family: var(--font-family);
                     font-weight: 500;
                     font-size: 0.9rem;
                 }
@@ -63,13 +74,161 @@ body {
         .main-sections {
             display: flex;
             flex-direction: row;
-            gap: 1rem;
+            gap: 1.5rem;
 
             a {
                 text-decoration: none;
                 color: var(--text-primary-color);
                 font-size: 0.9rem;
                 font-weight: 500;
+                font-family: var(--font-family);
+
+                &::after {
+                    display: block;
+                    content: '';
+                    height: 0.125rem;
+                    width: 100%;
+                    margin-top: 0.5rem;
+                    background-color: transparent; 
+                    transition: all 0.3s;
+                }
+
+                &:hover::after {
+                    background-color: var(--background-CTA-color);
+                }
+            }
+        }
+    }
+
+    .home-wrapper-image {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        background-image: url(../images/home-index-image.jpg);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        padding: 1.5rem;
+    
+        .main-title {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 17rem 10rem;
+
+            h1 {
+                font-family: var(--font-family);
+                font-weight: 400;
+                font-size: 3rem;
+                color: var(--text-secondary-color);
+                text-shadow: 0px 0px 0.45rem #000000;
+            }
+
+            p {
+                font-family: var(--font-family);
+                font-weight: 400;
+                font-size: 0.8rem;
+                color: var(--text-secondary-color);
+                text-shadow: 0px 0px 0.25rem #000000;
+                text-transform: uppercase;
+            }
+        }
+
+        .filter-form-data {
+            display: flex;
+            flex-direction: row;
+            gap: 0.75rem;
+            background-color: #fafafa50;
+            padding: 0.5rem 0.75rem;
+
+            input {
+                padding: 0.35rem 0.5rem;
+                width: 11rem;
+            }
+
+            select {
+                padding: 0.35rem 0.5rem;
+                width: 11rem;
+            }
+
+            button {
+                border: none;
+                padding: 0.35rem 1rem;
+                width: 11rem;
+                color: var(--background-primary-color);
+                background-color: var(--background-CTA-color);
+                font-family: var(--font-family);
+                font-weight: 500;
+                font-size: 0.9rem;
+                text-transform: uppercase;
+            }
+        }
+    }
+
+    .home-comment {
+        display: flex;
+        flex-direction: row;
+        padding: 1rem 12rem;
+    
+        .comment-rating {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            
+            h3 {
+                font-family: var(--font-family);
+                font-weight: 500;
+                font-size: 1.25rem;
+            }
+
+            .stars {
+                display: flex;
+                flex-direction: row;
+                font-size: 1.70rem;
+            }
+        }
+
+        .comment {
+            display: flex;
+            flex-direction: column;
+
+            h4 {
+                font-family: var(--font-family);
+                font-weight: 500;
+                font-size: 1rem;
+                text-transform: uppercase;
+            }
+            
+            p {
+                font-family: var(--font-family);
+                font-weight: 500;
+                font-size: 0.8rem;    
+                text-align: left;
+            }
+        }
+    }
+
+    .rooms-section {
+        display: flex;
+        flex-direction: column;
+        padding: 1.5rem 6rem;
+
+        .rooms-title-link {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+
+            h2 {
+                font-family: var(--font-family);
+                font-weight: 500;
+                font-size: 1.75rem;
+                text-transform: uppercase;
+            }
+
+            a {
+                
             }
         }
     }
