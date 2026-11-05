@@ -219,6 +219,7 @@ body {
             display: flex;
             flex-direction: row;
             justify-content: space-between;
+            align-items: center;
 
             h2 {
                 font-family: var(--font-family);
@@ -228,7 +229,15 @@ body {
             }
 
             a {
-                
+                font-family: var(--font-family);
+                font-weight: 500;
+                font-size: 1.1rem;
+                text-decoration: none;
+                color: var(--text-primary-color);
+
+                &:hover {
+                    color: #555555;
+                }
             }
         }
     }
